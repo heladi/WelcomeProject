@@ -47,6 +47,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<li></li>
 			<li></li>
 		</ul>
+		<div class="container" *ngIf ="welcomeMessageFromService">
+			<h2>Your Customized Welcome Message</h2>
+			{{welcomeMessageFromService}}
+		</div>
 	</div>
 	<!-- //main -->
 </body>

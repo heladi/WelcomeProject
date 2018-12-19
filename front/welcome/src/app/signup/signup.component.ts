@@ -8,6 +8,7 @@ import { WelcomeDataService } from '../service/data/welcome-data.service';
 })
 export class SignupComponent implements OnInit {
 
+  welcomeMessageFromService:String
   constructor(
    //In order to use welcome-data.service, need to use dependency injection
     private service:WelcomeDataService
@@ -21,8 +22,20 @@ export class SignupComponent implements OnInit {
 
   getWelcomeMessage(){
     // call the welcome message
-     this.service.executeHellowWorldBeanService();
-    console.log("get welcome message")
+    console.log(this.service.executeHellowWorldBeanService()) ;
+    this.service.executeHellowWorldBeanService().subscribe( 
+      // response => this.handleSuccessfulResponse(response)
+      // response => console.log(response.message)
+      response => this.handleSuccessfulResponse(response)
+    );
+    console.log("last line")
+    // console.log("get welcome message")
+  }
+
+  handleSuccessfulResponse(response){
+    this.welcomeMessageFromService = response.message
+    // console.log(response)
+    // console.log(response.message)
   }
 
 }

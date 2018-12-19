@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { SignupComponent } from './signup/signup.component';
 
 import { Routes, RouterModule} from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 const appRoutes: Routes = [
     {
@@ -23,7 +24,8 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,10 +1,10 @@
 package com.Login.login;
 
-public class HelloWorldBean {
+public class SignupSuccessBean {
 	
 	private String message;
 	
-	public HelloWorldBean(String message) {
+	public SignupSuccessBean(String message) {
 		this.message = message;
 	}
 
@@ -18,7 +18,7 @@ public class HelloWorldBean {
 
 	@Override
 	public String toString() {
-		return "HelloWorldBean [message=" + message + "]";
+		return "SignupSuccessBean [message=" + message + "]";
 	}
 	
 }

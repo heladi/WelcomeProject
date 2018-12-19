@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { WelcomeDataService } from '../service/data/welcome-data.service';
+import { signupDataService } from '../service/data/signup-data.service';
 
 @Component({
   selector: 'app-signup',
@@ -8,10 +8,10 @@ import { WelcomeDataService } from '../service/data/welcome-data.service';
 })
 export class SignupComponent implements OnInit {
 
-  welcomeMessageFromService:String
+  signupMessageFromService:String
   constructor(
-   //In order to use welcome-data.service, need to use dependency injection
-    private service:WelcomeDataService
+   //In order to use signup-data.service, need to use dependency injection
+    private service:signupDataService
     ) { 
 
     
@@ -20,8 +20,8 @@ export class SignupComponent implements OnInit {
   ngOnInit() {
   }
 
-  getWelcomeMessage(){
-    // call the welcome message
+  getSignupMessage(){
+    // call the signup message
     console.log(this.service.executeHellowWorldBeanService()) ;
     this.service.executeHellowWorldBeanService().subscribe( 
       // response => this.handleSuccessfulResponse(response)
@@ -29,11 +29,11 @@ export class SignupComponent implements OnInit {
       response => this.handleSuccessfulResponse(response)
     );
     console.log("last line")
-    // console.log("get welcome message")
+    // console.log("get signup message")
   }
 
   handleSuccessfulResponse(response){
-    this.welcomeMessageFromService = response.message
+    this.signupMessageFromService = response.message
     // console.log(response)
     // console.log(response.message)
   }

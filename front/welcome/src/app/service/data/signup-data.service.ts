@@ -11,7 +11,7 @@ export class HelloWorldBean {
 @Injectable({
   providedIn: 'root'
 })
-export class WelcomeDataService {
+export class signupDataService {
 
   constructor(
     private http:HttpClient

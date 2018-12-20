@@ -1,10 +1,10 @@
 package com.Login.login;
 
-public class SignupSuccessBean {
+public class LoginSuccessBean {
 	
 	private String message;
 	
-	public SignupSuccessBean(String message) {
+	public LoginSuccessBean(String message) {
 		this.message = message;
 	}
 
@@ -18,7 +18,7 @@ public class SignupSuccessBean {
 
 	@Override
 	public String toString() {
-		return "SignupSuccessBean [message=" + message + "]";
+		return "LoginSuccessBean [message=" + message + "]";
 	}
 	
 }

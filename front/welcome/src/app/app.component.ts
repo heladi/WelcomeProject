@@ -7,8 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'welcome';
-  getWelcomeMessage(){
-    console.log("get welcome message")
+  getSignupMessage(){
+    console.log("get login message")
   }
 }
 

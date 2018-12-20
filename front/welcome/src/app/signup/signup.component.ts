@@ -22,19 +22,16 @@ export class SignupComponent implements OnInit {
 
   getSignupMessage(){
     // call the signup message
-    console.log(this.service.executeHellowWorldBeanService()) ;
-    this.service.executeHellowWorldBeanService().subscribe( 
-      // response => this.handleSuccessfulResponse(response)
-      // response => console.log(response.message)
+    console.log(this.service.executeLoginService()) ;
+    this.service.executeLoginService().subscribe( 
       response => this.handleSuccessfulResponse(response)
     );
     console.log("last line")
-    // console.log("get signup message")
   }
 
   handleSuccessfulResponse(response){
     this.signupMessageFromService = response.message
-    // console.log(response)
+    console.log(response);
     // console.log(response.message)
   }
 

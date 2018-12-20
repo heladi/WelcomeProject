@@ -7,7 +7,8 @@ import javax.persistence.Id;
 //Table - User
 @Entity
 public class User {
-	
+
+	// Auto-generate user id
 	@Id
 	@GeneratedValue
 	private long id;
@@ -15,13 +16,12 @@ public class User {
 	private String password;
 
 
-	protected User() {
+	public User() {
 		
 	}
 	
-	public User(long id, String name, String password) {
+	public User(String name, String password) {
 		super();
-//		this.id = id;
 		this.name = name;
 		this.password = password;
 	}
@@ -34,7 +34,7 @@ public class User {
 		return name;
 	}
 
-	public String gepassword() {
+	public String getPassword() {
 		return password;
 	}
 	

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 //a simple bean defins the structure of the response
-export class HelloWorldBean {
+export class LoginSuccessBean {
   constructor(public message:string){
 
   }
@@ -20,8 +20,8 @@ export class signupDataService {
   ) { } 
 
   // retrieving the data from backend
-  executeHellowWorldBeanService(){
-    return this.http.get<HelloWorldBean>('http://localhost:8080/hello-world-bean');
-    //console.log("Excecute Hello World Bean Service")
+  executeLoginService(){
+    return this.http.get<LoginSuccessBean>('http://localhost:8080/login-successful');
+    //console.log("Excecute Sign Up Succesfull Service")
   }
 }

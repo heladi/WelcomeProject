@@ -7,11 +7,16 @@ import { SignupComponent } from './signup/signup.component';
 
 import { Routes, RouterModule} from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './login/login.component';
 
 const appRoutes: Routes = [
     {
       path:'signup',
       component:SignupComponent
+    },
+    {
+      path:'login',
+      component:LoginComponent
     }
 ];
 
@@ -19,7 +24,8 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    SignupComponent
+    SignupComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
